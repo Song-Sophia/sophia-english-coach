@@ -18,6 +18,18 @@
       body{background:#f5f2eb}.wrap{max-width:720px;padding:0 14px 28px}.hero{margin:0 -14px 16px;padding:28px 20px 20px;background:linear-gradient(135deg,#e3f4ee,#fbf5ed);gap:12px}.hero p{max-width:none;font-size:.98rem}.hero h1{font-size:clamp(2rem,8vw,2.7rem)}.streak{padding:13px 16px;border-radius:15px}.sidebar{background:transparent;border:0;box-shadow:none;padding:0}.sidebar .stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:13px 15px;margin:0 0 10px}.sidebar .nav{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.sidebar .nav button{background:var(--card);border:1px solid var(--line);min-height:54px;text-align:center;font-size:.76rem;overflow-wrap:anywhere}.sidebar .nav button.active{border-color:#b8e2d8}.goal{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-top:9px;padding:11px 13px}.toolbar{margin-top:15px}.filter{scroll-snap-type:x proximity}.filter button{scroll-snap-align:start}.study{border-radius:20px;min-height:410px}.footer-note{padding-bottom:12px;overflow-wrap:anywhere}
     }
   </style>
+  <style>
+    /* Deliberately app-first: never rely on browser viewport detection. */
+    html,body{width:100%;min-width:0;overflow-x:clip}
+    .wrap{width:100%;max-width:680px;min-width:0;margin:0 auto;padding:0 14px 28px}
+    .hero{display:flex;flex-direction:column;align-items:stretch;margin:0 -14px 16px;padding:28px 20px 20px;gap:12px;background:linear-gradient(135deg,#e3f4ee,#fbf5ed)}
+    .hero p{max-width:none}.streak{width:100%;display:flex;align-items:baseline;gap:8px}.streak strong{display:inline}
+    .grid{display:grid;grid-template-columns:minmax(0,1fr);width:100%;min-width:0;gap:14px}
+    main,.sidebar,.study,.toolbar{min-width:0;width:100%}.sidebar{background:transparent;border:0;box-shadow:none;padding:0}.sidebar h3{display:none}.sidebar .stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:13px 15px;margin:0 0 10px}
+    .sidebar .nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:8px;white-space:normal}.sidebar .nav button{min-width:0;min-height:54px;overflow-wrap:anywhere;text-align:center;background:var(--card);border:1px solid var(--line);font-size:.82rem}
+    .goal{display:flex;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--line);border-radius:14px;margin-top:9px;padding:11px 13px}.goal input{float:none;flex:0 0 64px}
+    .toolbar{display:block;margin-top:15px}.search{width:100%;min-width:0}.filter{max-width:100%;margin-top:10px}.study{padding:25px 19px;min-height:410px}.actions{max-width:100%}.footer-note{overflow-wrap:anywhere}
+  </style>
 </head>
 <body><div class="wrap">
   <header class="hero"><div><div class="eyebrow">Speak it. Sell it. Remember it.</div><h1>Sophia English Coach</h1><p>Build working vocabulary for cross-border e-commerce. Learn new words, recall them in context, and use them out loud.</p></div><div class="streak"><strong id="dueCount">0</strong> cards to review</div></header>
